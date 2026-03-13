@@ -18,6 +18,10 @@ console.log("MongoDB Atlas Connected")
 console.log("MongoDB Connection Error:",err)
 })
 
+app.get("/", (req, res) => {
+  res.send("InternTrack API is running 🚀");
+});
+
 
 /* ROUTES */
 
@@ -28,6 +32,9 @@ app.use("/api",authRoutes)
 app.use("/api/internships",internshipRoutes)
 
 
-app.listen(process.env.PORT || 5000,()=>{
-console.log("Server running on port 5000")
-})
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
