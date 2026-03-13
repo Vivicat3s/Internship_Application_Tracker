@@ -17,7 +17,7 @@ const [editId,setEditId] = useState(null);
 const [showModal,setShowModal] = useState(false);
 const [search,setSearch] = useState("");
 
-const API="http://localhost:5000/api/internships";
+const API="https://internship-application-tracker-b6sc.onrender.com/api/internships";
 
 
 /* FETCH */

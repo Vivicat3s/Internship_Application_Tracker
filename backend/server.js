@@ -5,7 +5,10 @@ require("dotenv").config()
 
 const app = express()
 
-app.use(cors())
+
+app.use(cors({
+origin: "https://internship-application-tracker-s77y.vercel.app"
+}))
 app.use(express.json())
 
 /* MONGODB CONNECTION */
